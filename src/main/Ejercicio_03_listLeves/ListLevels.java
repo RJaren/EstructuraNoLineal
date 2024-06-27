@@ -8,16 +8,16 @@ import java.util.List;
 public class ListLevels {
 
     public ListLevels(Object object) {
-        //TODO Auto-generated constructor stub
+        
     }
 
     public List<List<Node>> listLevels(Node root) {
         List<List<Node>> result = new ArrayList<>();
-        listLevelsHelper(root, 0, result);
+        listLevel(root, 0, result);
         return result;
     }
 
-    private void listLevelsHelper(Node node, int level, List<List<Node>> result) {
+    private void listLevel(Node node, int level, List<List<Node>> result) {
         if (node == null) {
             return;
         }
@@ -28,7 +28,7 @@ public class ListLevels {
 
         result.get(level).add(node);
 
-        listLevelsHelper(node.getLeft(), level + 1, result);
-        listLevelsHelper(node.getRight(), level + 1, result);
+        listLevel(node.getLeft(), level + 1, result);
+        listLevel(node.getRight(), level + 1, result);
     }
 }

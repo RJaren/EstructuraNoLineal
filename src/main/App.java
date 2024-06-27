@@ -1,6 +1,7 @@
 package main;
 
 import main.Materia.Models.Node;
+import main.Materia.Controllers.AVLTree;
 import main.Materia.Controllers.ArbolBinario;
 
 /*
@@ -40,5 +41,14 @@ public class App {
 
         System.out.println("\n In Order");
         arbolBinario.inOrderRecursivo(nodeRaiz);
+        
+        AVLTree tree = new AVLTree();
+
+        int[] values = { 10, 20, 15, 24, 9, 8, 21, 23, 50, 25 };
+
+        for (int value : values) {
+            tree.insert(value);
+        }
+        System.out.println(tree);
     }
 }
