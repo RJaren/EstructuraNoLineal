@@ -71,8 +71,9 @@ public class AVLTree {
     }
 
     private Node rightRotate(Node nodeR) {
+        System.out.println("El nodo " + nodeR.getValue() + "Rota a la Derecha, Balance: " +getBalance(nodeR));
         Node x = nodeR.getLeft();
-        System.out.println("Rota a la Izquierda " + x.getValue());
+        System.out.println("Nueva rotación del nodo a la derecha " + x.getValue());
         Node temp = x.getRight();
 
         // realizar la rotacion
@@ -88,8 +89,9 @@ public class AVLTree {
     }
 
     private Node leftRotate(Node nodeR) {
+        System.out.println("El nodo " + nodeR.getValue() + "Rota a la izquierda, Balance: " +getBalance(nodeR));
         Node y = nodeR.getRight();
-        System.out.println(" Rota a la Derecha " + y.getValue());
+        System.out.println("Nueva Rotación del nodo a la izquierda " + y.getValue());
         Node temp = y.getLeft();
 
         // Realizar la rotacion
